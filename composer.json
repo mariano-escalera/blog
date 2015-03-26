@@ -1,0 +1,21 @@
+{
+    "name": "polarix-q/blog-template",
+    "description": "A simple blog template that uses startbootstrap blog template and a few of slim",
+    "require": {
+        "slim/slim": "2.*",
+        "clickcoder/slim-blade": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "app"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "quarkmarino",
+            "email": "quarkmarino@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

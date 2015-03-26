@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+	# We enable the rewrite module via this directive, rule of thumb always use this directive when rewriting
+	RewriteEngine On
+
+	# We define the condition associated with the next rule and only is evaluated if the rule's pattern matches
+	#This condition is true when the route to REQUEST_FILENAME is not a reference for a file that exists in the server
+	RewriteCond %{REQUEST_FILENAME} !-f
+
+	# The rewrite rule used to translate any path string into the php script
+	# We set the flags QSA:Query String Append
+	# and L: Last, which stops the rewriting process immediately
+	RewriteRule ^ index.php [QSA,L]
+</IfModule>
