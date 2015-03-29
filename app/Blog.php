@@ -4,11 +4,13 @@ namespace App;
 use \Slim\Slim as Slim;
 use \Slim\Middleware\SessionCookie as SessionCookie;
 use \Slim\Views\Blade as Blade;
+use \Zeuxisoo\Whoops\Provider\Slim\WhoopsMiddleware as WhoopsMiddleware;
 
 class Blog{
 
 	protected $app;
 
+	# Remove after configuring and seeding the database
 	protected $fixture_posts = [[
 		'id' => 1,
 		'title' => 'First post',
@@ -49,6 +51,7 @@ class Blog{
 			'templates.path' => '../app/views'
 		]);
 		$this->app->add(new SessionCookie());
+		$this->app->add(new WhoopsMiddleware);
 
 		$views = $this->app->view();
 		$views->parserOptions = [
