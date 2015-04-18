@@ -1,10 +1,16 @@
 {
     "name": "polarix-q/blog-template",
     "description": "A simple blog template that uses startbootstrap blog template and a few of slim",
+    "repositories": [
+        {
+            "type":"vcs",
+            "url":"https://github.com/mariano-escalera/slim-blade"
+        }
+    ],
     "require": {
         "slim/slim": "2.*",
         "clickcoder/slim-blade": "dev-master",
-	"zeuxisoo/slim-whoops": "0.3.0"
+        "zeuxisoo/slim-whoops": "0.3.0"
     },
     "autoload": {
         "classmap": [
